@@ -51,7 +51,7 @@ return (
             checked={task.completed}
             onChange={() => toggleTaskCompletion(task.id)}
           />
-          <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+          <span className={task.completed ? 'completed' : ''}>
             {task.text}
           </span>
           <button onClick={() => deleteTask(task.id)}>Delete</button>
